@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/move"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:background="@drawable/history_rec_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:layout_gravity="left"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/Retitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_gravity="bottom"
+                    android:singleLine="true"
+                    android:text="happy birthday"
+                    android:fontFamily="@font/baloo_regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:layout_weight=".8">
+
+                <ImageView
+                    android:id="@+id/chake"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/not_selact"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Redata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo_regular"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="#2E2E2E"
+            android:maxLines="5"
+            android:ellipsize = "end"/>
+
+    </LinearLayout>
+
+</LinearLayout>

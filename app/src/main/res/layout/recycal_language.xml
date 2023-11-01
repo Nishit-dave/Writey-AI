@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/chke_Rela"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/edt_main_bg"
+            android:paddingLeft="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/item_circal">
+
+                <ImageView
+                    android:id="@+id/im"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/twobook" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/layout"
+                android:fontFamily="@font/atkinson_hyperlegible_regular"
+                android:singleLine="true"
+                android:text="Medium"
+                android:textSize="17dp"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/not_selact"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

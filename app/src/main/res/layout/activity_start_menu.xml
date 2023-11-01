@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE44D"
+    tools:context=".StartMenuActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_top"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            style="@style/PressEffect"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textSize="@dimen/_18sdp"
+            android:layout_toRightOf="@id/back"
+            android:fontFamily="@font/baloo_regular"
+            android:text="Start Menu"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_430sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/menu_circal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/midal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_260sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/icoco"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/inside"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/instid_instagram" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/only_one"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_below="@id/icoco">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/only_one_btn"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/caption" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/two_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/icoco">
+
+            <RelativeLayout
+                android:id="@+id/btn_one_layout"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/one_btn_two"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/caption" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@id/btn_one_layout"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/second_btn_two"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/hashtag" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/instagramLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="15"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/instagramIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            style="@style/PressEffect2"
+            android:adjustViewBounds="true"
+            android:src="@drawable/instagram_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Instagram"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/facebookLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="40"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/facebookIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            style="@style/PressEffect2"
+            android:src="@drawable/facebook_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Facebook"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/youtubeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/youtubeIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            style="@style/PressEffect2"
+            android:src="@drawable/youtube_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="YouTube"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/xLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="80"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/xIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            style="@style/PressEffect2"
+            android:src="@drawable/x_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="X      "
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/blogLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="100"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/blogIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            style="@style/PressEffect2"
+            android:adjustViewBounds="true"
+            android:src="@drawable/blog_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Blog"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linkedinLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/linkedinIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            style="@style/PressEffect2"
+            android:adjustViewBounds="true"
+            android:src="@drawable/linkedin_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Linked in"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/essayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="144"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/essayIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            style="@style/PressEffect2"
+            android:src="@drawable/essay_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Essay"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@id/center"
+        app:layout_constraintCircleAngle="170"
+        app:layout_constraintCircleRadius="@dimen/_210sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/emailIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            style="@style/PressEffect2"
+            android:adjustViewBounds="true"
+            android:src="@drawable/email_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="E-mail"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

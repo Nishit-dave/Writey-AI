@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE44D"
+    tools:context=".ResultActivity">
+
+    <ImageView
+        android:layout_width="@dimen/_135sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ring" />
+
+    <ImageView
+        android:layout_width="@dimen/_86sdp"
+        android:layout_height="@dimen/_76sdp"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/yellow_botom" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/main_top"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:padding="15dp"
+                style="@style/PressEffect"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/menuRE"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textSize="@dimen/_18sdp"
+                android:layout_toRightOf="@id/back"
+                android:fontFamily="@font/baloo_regular"
+                android:text="Result"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/menuRE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="8dp"
+                    style="@style/PressEffect"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/copy"/>
+
+                <ImageView
+                    android:id="@+id/shar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    style="@style/PressEffect"
+                    android:src="@drawable/shar"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/result_layout"
+            android:layout_width="@dimen/_290sdp"
+            android:layout_height="@dimen/_430sdp"
+            android:layout_below="@id/main_top"
+            android:layout_above="@+id/reWrite"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/result_bg"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="25dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edt_main_bg">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:padding="3dp"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:padding="12dp"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/result"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/baloo_regular"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reWrite"
+            android:layout_width="@dimen/_290sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/re_write_bg"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/whitw_rwsult_cical">
+
+                <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/yellow_robot" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:fontFamily="@font/baloo_regular"
+                    android:text="Re Generate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/textChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo_regular"
+                    android:text="re generate same query again ?"
+                    android:textColor="#777777"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rewrite"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/gunrate_btn">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/baloo_regular"
+                        android:text="Re-Write"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Ads"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/gunrate_btn">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/baloo_regular"
+                        android:text="ADS"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/coin_ani"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/coin" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_id"/>
+
+</RelativeLayout>
